@@ -106,6 +106,10 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
     color:hsl(39, 92%, 45%);
 }
 
+#people-section input {
+    margin-top:2%;
+}
+
 #tip-selection {
     display:flex;
     justify-content: space-between;
