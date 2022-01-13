@@ -173,7 +173,7 @@ button {
     font-size:0.6rem;
 }
 
-#results button {
+#reset-btn {
     width:90%;
     display:block;
     margin:1rem auto;
@@ -185,7 +185,7 @@ button {
     padding:2% 0;
 }
 
-#results button:hover {
+#reset-btn:hover {
     cursor:pointer;
     background-color:hsl(185, 41%, 84%);
 }
@@ -227,5 +227,9 @@ button {
     #people-section #error-message {
         font-size:0.7rem;
         margin:0 4% 0 0;
+    }
+
+    #reset-btn {
+        margin-top:25%;
     }
 }
