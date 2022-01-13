@@ -1,0 +1,182 @@
+body {
+    margin:0;
+    font-family:'Space Mono', monospace;
+    background-color:hsl(185, 41%, 84%);
+}
+
+main {
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+} 
+
+#container {
+    width:20rem;
+    height:85vh;
+}
+
+#calculator {
+    border-radius:15px;
+    background-color:hsl(0, 0%, 100%);
+    display:flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing: 5px;
+    color:hsl(186, 14%, 43%);
+    font-size:1.5rem;
+    margin-bottom:2%;
+}
+
+
+#filters {
+    width:90%;
+    margin:0 auto;
+}
+
+#results {
+    width:90%;
+    margin:5% auto;
+    background-color:hsl(183, 100%, 15%);
+    border-radius:15px;
+    color:white;
+}
+
+input {
+    border:none;
+    background-color:hsl(180, 17%, 94%);
+    width:95%;
+    height:2rem;
+    color:hsl(183, 100%, 15%);
+    font-size:1.5rem;
+    font-weight: 700;
+    text-align:right;
+    padding-right:5%;
+}
+
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+    appearance: none;
+    margin:0;
+}
+
+#bill-input {
+    background-image:url("images/icon-dollar.svg");
+    background-repeat:no-repeat;
+    background-position: 3%;
+}
+
+#people-input {
+    background-image:url("images/icon-person.svg");
+    background-repeat:no-repeat;
+    background-position: 3%;
+}
+
+#custom-input {
+    font-size:1rem;
+    width:35%;
+}
+
+#filters h5 {
+    margin-bottom:1rem;
+}
+
+#tip-selection {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+button {
+    border:none;
+    border-radius:5px;
+}
+
+#tip-selection button {
+    color:white;
+    background-color:hsl(183, 100%, 15%);  
+    width:40%;
+    font-size:1.2rem;
+    padding:2% 0;
+    margin-bottom:4%;   
+}
+
+#tip-selection button:hover {
+    cursor:pointer;
+    color:hsl(183, 100%, 15%);
+    background-color:hsl(185, 41%, 84%) !important;
+}
+
+.result-div{
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    letter-spacing: 2px;
+}
+
+.result-div h2 {
+    font-size:1.7rem;
+    color:hsl(172, 67%, 45%);
+}
+
+.result-div h5 {
+    margin-bottom:0.5rem;
+}
+
+.result-div p {
+    color:hsl(180, 4%, 75%);
+    font-size:0.6rem;
+}
+
+#results button {
+    width:90%;
+    display:block;
+    margin:1rem auto;
+    text-transform: uppercase;
+    background-color:hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size:1rem;
+    padding:2% 0;
+}
+
+@media screen and (min-width:768px) {
+    main {
+        align-items:center;
+    }
+    
+    #container {
+        width:50rem;
+        height:65vh;
+    }
+    
+    #calculator {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #filters {
+        width:40%;
+        margin:5% 0;
+    }
+    
+    #results {
+        width:40%;
+        margin:5% 0;
+    }
+
+    #tip-selection button {
+        width:30%;
+        padding:2% 0;  
+    }
+
+    #custom-input {
+        font-size:1rem;
+        width:25%;
+    }
+
+}
