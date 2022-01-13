@@ -29,7 +29,8 @@
             <input type="number" id="custom-input" placeholder="Custom">
           </div>
           <div id="people-section">
-            <h5>Number of People</h5>
+            <span>Number of People</span>
+            <span id="error-message">Please put a number</span>
             <input type="number" id="people-input" name="people">
           </div>
         </section>
@@ -40,7 +41,7 @@
               <p>&#47; person</p>
             </div>
             <div>
-              <h2 id="tip-per-person">0</h2>
+              <h2 id="tip-per-person">&#36;0</h2>
             </div>
           </div>
           <div id="total-div" class="result-div">
@@ -49,7 +50,7 @@
               <p>&#47; person</p>
             </div>
             <div>
-              <h2 id="total-per-person">0</h2>
+              <h2 id="total-per-person">&#36;0</h2>
             </div>
           </div>
           <button id="reset-btn">reset</button>

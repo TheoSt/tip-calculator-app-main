@@ -5,17 +5,20 @@ let people_input_elem = document.querySelector("#people-input");
 let reset_btn = document.querySelector("#reset-btn");
 let tip_person_elem = document.querySelector("#tip-per-person");
 let total_person_elem = document.querySelector("#total-per-person");
+let zero_people_span = document.querySelector("#error-message");
+
 
 let bill_amount = 0;
 let tip_amount = 0;
 let people_amount = 0;
 let active_btn = null;
+let show_message = false;
 
 bill_input_elem.addEventListener("input", function(e) {
     bill_amount = parseFloat(e.target.value);
     if(people_amount && tip_amount) calcResult();
 });
-
+ 
 tip_buttons.forEach(btn => {
     btn.addEventListener("click", function() {
         if(active_btn) active_btn.style.backgroundColor = "hsl(183, 100%, 15%)";
@@ -44,7 +47,25 @@ custom_tip_elem.addEventListener("input", function(e) {
 
 people_input_elem.addEventListener("input", function(e) {
     people_amount = parseInt(e.target.value);
-    if(bill_amount && tip_amount) calcResult(); 
+
+    if(!isNaN(people_amount) && people_amount !== 0) {
+       if(show_message)  {
+           zero_people_span.classList.toggle("error-people");
+           this.style.border = "none";
+       }
+       if(tip_amount && bill_amount) calcResult();
+       show_message = false;
+    }
+    else {
+        if(!show_message) {
+            this.style.border = "2px solid orange";
+            this.style.outline = "none";
+            zero_people_span.classList.toggle("error-people");
+            show_message = true; 
+        }     
+        resetTotal();
+    }
+
 });
 
 reset_btn.addEventListener("click", function() {
@@ -72,10 +93,14 @@ function reset() {
     bill_amount = 0;
     tip_amount = 0;
     people_amount = 0;
-    tip_person_elem.textContent = 0;
-    total_person_elem.textContent = 0;
+    resetTotal();
     bill_input_elem.value = "";
     if(custom_tip_elem.value!=0) custom_tip_elem.value = "";
     people_input_elem.value = "";
+}
+
+function resetTotal() {
+    tip_person_elem.textContent = "$0";
+    total_person_elem.textContent = "$0";
 }
 
