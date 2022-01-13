@@ -34,6 +34,7 @@ h1 {
 #filters {
     width:90%;
     margin:0 auto;
+    padding-top:2%;
 }
 
 #results {
@@ -42,6 +43,19 @@ h1 {
     background-color:hsl(183, 100%, 15%);
     border-radius:15px;
     color:white;
+}
+
+#filters label {
+    font-size:0.8rem;
+    font-weight:700;
+}
+
+#filters h5 {
+    margin-bottom:0;
+}
+
+#tip-selection {
+    margin-top:5%;
 }
 
 input {
@@ -64,12 +78,14 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
     background-image:url("images/icon-dollar.svg");
     background-repeat:no-repeat;
     background-position: 3%;
+    margin-top:2%;
 }
 
 #people-input {
     background-image:url("images/icon-person.svg");
     background-repeat:no-repeat;
     background-position: 3%;
+    margin-top:2%;
 }
 
 #custom-input {
@@ -78,9 +94,7 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
     padding-right:2%;
 }
 
-#filters h5{
-    margin-bottom:1rem;
-}
+
 
 #people-section {
     width:100%;
@@ -104,10 +118,6 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
     float:right;
     font-weight: 700;
     color:hsl(39, 92%, 45%);
-}
-
-#people-section input {
-    margin-top:2%;
 }
 
 #tip-selection {

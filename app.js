@@ -97,6 +97,11 @@ function reset() {
     bill_input_elem.value = "";
     if(custom_tip_elem.value!=0) custom_tip_elem.value = "";
     people_input_elem.value = "";
+
+    if(show_message) {
+        zero_people_span.classList.toggle("error-people");
+        zero_people_span.parentNode.children[2].style.border = "none";
+    }  
 }
 
 function resetTotal() {
